@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707F2CC1C5D369E00586BF7 /* AppDelegate.swift */; };
-		B707F2CF1C5D369E00586BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707F2CE1C5D369E00586BF7 /* ViewController.swift */; };
-		B707F2D21C5D369E00586BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B707F2D01C5D369E00586BF7 /* Main.storyboard */; };
 		B707F2D41C5D369E00586BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B707F2D31C5D369E00586BF7 /* Assets.xcassets */; };
-		B707F2D71C5D369E00586BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B707F2D51C5D369E00586BF7 /* LaunchScreen.storyboard */; };
 		B707F2E21C5D369E00586BF7 /* iSokoBetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707F2E11C5D369E00586BF7 /* iSokoBetaTests.swift */; };
+		B733047E1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */; };
+		B733047F1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */; };
+		B73304801C5D3FAF0040A4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047D1C5D3FAF0040A4EC /* Main.storyboard */; };
+		B73304811C5D3FAF0040A4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047D1C5D3FAF0040A4EC /* Main.storyboard */; };
+		B73304851C5D3FE50040A4EC /* UserNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304821C5D3FE50040A4EC /* UserNeed.swift */; };
+		B73304861C5D3FE50040A4EC /* UserNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304821C5D3FE50040A4EC /* UserNeed.swift */; };
+		B73304871C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */; };
+		B73304881C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */; };
+		B73304891C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */; };
+		B733048A1C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */; };
+		B73304921C5D42330040A4EC /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304911C5D42330040A4EC /* HomePageViewController.swift */; };
+		B73304931C5D42330040A4EC /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304911C5D42330040A4EC /* HomePageViewController.swift */; };
 		EB5976260062BDBADD449BDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E047CBA1EF05C1026A793A20 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -30,16 +39,19 @@
 		0F0684DB27D4D4A605AAC9CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B707F2C91C5D369E00586BF7 /* iSokoBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSokoBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B707F2CC1C5D369E00586BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B707F2CE1C5D369E00586BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B707F2D11C5D369E00586BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B707F2D31C5D369E00586BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B707F2D61C5D369E00586BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B707F2D81C5D369E00586BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B707F2DD1C5D369E00586BF7 /* iSokoBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSokoBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B707F2E11C5D369E00586BF7 /* iSokoBetaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSokoBetaTests.swift; sourceTree = "<group>"; };
 		B707F2E31C5D369E00586BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B73304761C5D39B80040A4EC /* iSokoBeta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSokoBeta-Bridging-Header.h"; sourceTree = "<group>"; };
 		B73304771C5D39B80040A4EC /* iSokoBetaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSokoBetaTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B733047D1C5D3FAF0040A4EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B73304821C5D3FE50040A4EC /* UserNeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNeed.swift; sourceTree = "<group>"; };
+		B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
+		B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedDefinitionTableViewController.swift; sourceTree = "<group>"; };
+		B73304911C5D42330040A4EC /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = ../HomePageViewController.swift; sourceTree = "<group>"; };
 		BA5C0F8B6AB8ACFF904E38E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E047CBA1EF05C1026A793A20 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,11 +106,14 @@
 		B707F2CB1C5D369E00586BF7 /* iSokoBeta */ = {
 			isa = PBXGroup;
 			children = (
+				B73304911C5D42330040A4EC /* HomePageViewController.swift */,
+				B73304821C5D3FE50040A4EC /* UserNeed.swift */,
+				B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */,
+				B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */,
+				B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */,
+				B733047D1C5D3FAF0040A4EC /* Main.storyboard */,
 				B707F2CC1C5D369E00586BF7 /* AppDelegate.swift */,
-				B707F2CE1C5D369E00586BF7 /* ViewController.swift */,
-				B707F2D01C5D369E00586BF7 /* Main.storyboard */,
 				B707F2D31C5D369E00586BF7 /* Assets.xcassets */,
-				B707F2D51C5D369E00586BF7 /* LaunchScreen.storyboard */,
 				B707F2D81C5D369E00586BF7 /* Info.plist */,
 				B73304761C5D39B80040A4EC /* iSokoBeta-Bridging-Header.h */,
 				B73304771C5D39B80040A4EC /* iSokoBetaTests-Bridging-Header.h */,
@@ -208,9 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B707F2D71C5D369E00586BF7 /* LaunchScreen.storyboard in Resources */,
+				B73304801C5D3FAF0040A4EC /* Main.storyboard in Resources */,
 				B707F2D41C5D369E00586BF7 /* Assets.xcassets in Resources */,
-				B707F2D21C5D369E00586BF7 /* Main.storyboard in Resources */,
+				B733047E1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +233,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B733047F1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */,
+				B73304811C5D3FAF0040A4EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B707F2CF1C5D369E00586BF7 /* ViewController.swift in Sources */,
+				B73304871C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,
 				B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */,
+				B73304851C5D3FE50040A4EC /* UserNeed.swift in Sources */,
+				B73304921C5D42330040A4EC /* HomePageViewController.swift in Sources */,
+				B73304891C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73304861C5D3FE50040A4EC /* UserNeed.swift in Sources */,
+				B73304881C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,
+				B733048A1C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
+				B73304931C5D42330040A4EC /* HomePageViewController.swift in Sources */,
 				B707F2E21C5D369E00586BF7 /* iSokoBetaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,25 +322,6 @@
 			targetProxy = B707F2DE1C5D369E00586BF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B707F2D01C5D369E00586BF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B707F2D11C5D369E00586BF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B707F2D51C5D369E00586BF7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B707F2D61C5D369E00586BF7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B707F2E41C5D369E00586BF7 /* Debug */ = {
