@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Create a reference to a Firebase location
+        var myRootRef = Firebase(url:"https://<YOUR-FIREBASE-APP>.firebaseio.com")
+        // Write data to Firebase
+        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        
         //test Github
     }
 
