@@ -101,16 +101,19 @@
                                 <rect key="frame" x="239" y="362" width="122" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-0e-EBh">
-                                <rect key="frame" x="216" y="431" width="168" height="30"/>
-                                <state key="normal" title="Create account"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-ha-d5o">
                                 <rect key="frame" x="283" y="402" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-0e-EBh">
+                                <rect key="frame" x="188" y="443" width="225" height="30"/>
+                                <state key="normal" title="You have no acount yet?"/>
+                                <connections>
+                                    <segue destination="gbk-aO-8lS" kind="show" id="wdQ-4A-xhL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -140,6 +143,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llg-jv-iuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-477" y="960"/>
+        </scene>
+        <!--Create your account-->
+        <scene sceneID="MGw-tt-vY4">
+            <objects>
+                <viewController id="gbk-aO-8lS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dLK-ZR-z8n"/>
+                        <viewControllerLayoutGuide type="bottom" id="oel-3V-M59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fUw-EB-xfl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create your account" id="ptZ-RM-uqM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmd-rV-1d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="960"/>
         </scene>
         <!--Your plan-->
         <scene sceneID="Xg3-Z3-dEB">
