@@ -147,7 +147,7 @@
         <!--Create your account-->
         <scene sceneID="MGw-tt-vY4">
             <objects>
-                <viewController id="gbk-aO-8lS" sceneMemberID="viewController">
+                <viewController id="gbk-aO-8lS" customClass="AccountCreationViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dLK-ZR-z8n"/>
                         <viewControllerLayoutGuide type="bottom" id="oel-3V-M59"/>
@@ -165,6 +165,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIZ-e2-27u">
                                 <rect key="frame" x="235" y="409" width="130" height="30"/>
                                 <state key="normal" title="Create my account"/>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="gbk-aO-8lS" eventType="touchUpInside" id="FaX-dU-fEj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-WK-ARd">
                                 <rect key="frame" x="20" y="107" width="127" height="21"/>
@@ -200,6 +203,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create your account" id="ptZ-RM-uqM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qZi-nO-d6Z" id="evZ-NW-gAS"/>
+                        <outlet property="passwordTextField" destination="7UE-jl-XzJ" id="Nzi-RG-LxT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmd-rV-1d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
