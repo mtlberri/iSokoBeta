@@ -147,7 +147,7 @@
         <!--Create your account-->
         <scene sceneID="MGw-tt-vY4">
             <objects>
-                <viewController id="gbk-aO-8lS" customClass="AccountCreationViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gbk-aO-8lS" customClass="RegisterViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dLK-ZR-z8n"/>
                         <viewControllerLayoutGuide type="bottom" id="oel-3V-M59"/>
