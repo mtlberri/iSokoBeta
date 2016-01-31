@@ -24,6 +24,8 @@
 		B73304931C5D42330040A4EC /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304911C5D42330040A4EC /* HomePageViewController.swift */; };
 		B798D1CA1C5EB739001706AF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798D1C91C5EB739001706AF /* RegisterViewController.swift */; };
 		B798D1CB1C5EB739001706AF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798D1C91C5EB739001706AF /* RegisterViewController.swift */; };
+		B798D1CD1C5EBADD001706AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798D1CC1C5EBADD001706AF /* LoginViewController.swift */; };
+		B798D1CE1C5EBADD001706AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798D1CC1C5EBADD001706AF /* LoginViewController.swift */; };
 		EB5976260062BDBADD449BDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E047CBA1EF05C1026A793A20 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,7 @@
 		B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedDefinitionTableViewController.swift; sourceTree = "<group>"; };
 		B73304911C5D42330040A4EC /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = ../HomePageViewController.swift; sourceTree = "<group>"; };
 		B798D1C91C5EB739001706AF /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B798D1CC1C5EBADD001706AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA5C0F8B6AB8ACFF904E38E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E047CBA1EF05C1026A793A20 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +124,7 @@
 				B73304761C5D39B80040A4EC /* iSokoBeta-Bridging-Header.h */,
 				B73304771C5D39B80040A4EC /* iSokoBetaTests-Bridging-Header.h */,
 				B798D1C91C5EB739001706AF /* RegisterViewController.swift */,
+				B798D1CC1C5EBADD001706AF /* LoginViewController.swift */,
 			);
 			path = iSokoBeta;
 			sourceTree = "<group>";
@@ -297,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B798D1CD1C5EBADD001706AF /* LoginViewController.swift in Sources */,
 				B73304871C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,
 				B798D1CA1C5EB739001706AF /* RegisterViewController.swift in Sources */,
 				B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */,
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B798D1CE1C5EBADD001706AF /* LoginViewController.swift in Sources */,
 				B73304861C5D3FE50040A4EC /* UserNeed.swift in Sources */,
 				B798D1CB1C5EB739001706AF /* RegisterViewController.swift in Sources */,
 				B73304881C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,

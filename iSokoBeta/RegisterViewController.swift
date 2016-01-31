@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
             print("email is \(emailTextField.text) and pwd is \(passwordTextField.text)")
             
             // create user on Firebase
-            var ref = Firebase(url:"https://isoko.firebaseio.com")
+            let ref = Firebase(url:"https://isoko.firebaseio.com")
             
             ref.createUser(emailTextField.text, password: passwordTextField.text,
                 withValueCompletionBlock: { error, result in
@@ -41,9 +41,29 @@ class RegisterViewController: UIViewController {
                     } else {
                         let uid = result["uid"] as? String
                         print("Successfully created user account with uid: \(uid)")
+                        
+                        // create a user in the JSON tree
+                        
+                        let usersRef = ref.childByAppendingPath("users")
+                        let newUserRef = usersRef.childByAppendingPath(uid)
+                        newUserRef.setValue(self.emailTextField.text)
+                        
+                        
+                        
+                        // logging user in
+                        ref.authUser(self.emailTextField.text, password: self.passwordTextField.text,
+                            withCompletionBlock: { error, authData in
+                                
+                                if error != nil {
+                                    print("There was an error logging in to this account")
+                                } else {
+                                    print("\(self.emailTextField.text) is now logged in")
+                                }
+                        })
+                        
                     }
             })
-            
+                        
         }
         
     }

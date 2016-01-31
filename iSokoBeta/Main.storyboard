@@ -66,7 +66,7 @@
         <!--Login-->
         <scene sceneID="Kuk-z9-5Xr">
             <objects>
-                <viewController id="RfW-9Z-Z1a" sceneMemberID="viewController">
+                <viewController id="RfW-9Z-Z1a" customClass="LoginViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uyy-V6-kB0"/>
                         <viewControllerLayoutGuide type="bottom" id="hL0-tq-rG3"/>
@@ -95,11 +95,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-Ub-w1Y">
                                 <rect key="frame" x="20" y="264" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm1-qc-v8M">
                                 <rect key="frame" x="239" y="362" width="122" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="RfW-9Z-Z1a" eventType="touchUpInside" id="E6X-DA-0Kd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-ha-d5o">
                                 <rect key="frame" x="283" y="402" width="42" height="21"/>
@@ -109,7 +112,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-0e-EBh">
                                 <rect key="frame" x="188" y="443" width="225" height="30"/>
-                                <state key="normal" title="You have no acount yet?"/>
+                                <state key="normal" title="No account yet?"/>
                                 <connections>
                                     <segue destination="gbk-aO-8lS" kind="show" id="wdQ-4A-xhL"/>
                                 </connections>
@@ -139,6 +142,10 @@
                     <navigationItem key="navigationItem" title="Login" id="RJq-dX-xa3">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Lkm-ph-Bi9"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="p0o-D1-lRd" id="EPO-yI-oqc"/>
+                        <outlet property="passwordTextField" destination="tCl-Ub-w1Y" id="6M9-hm-0Gw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llg-jv-iuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,7 +185,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7UE-jl-XzJ">
                                 <rect key="frame" x="20" y="266" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qZi-nO-d6Z">
                                 <rect key="frame" x="20" y="150" width="560" height="30"/>

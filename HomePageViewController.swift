@@ -14,13 +14,17 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://isoko.firebaseio.com")
+        let myRootRef = Firebase(url:"https://isoko.firebaseio.com")
         
         // Read data and react to changes
         myRootRef.observeEventType(.Value, withBlock: {
             snapshot in
             print("\(snapshot.key) -> \(snapshot.value)")
         })
+        
+        // check if user logged in
+        
+        
         
     }
 
