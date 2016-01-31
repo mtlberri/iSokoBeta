@@ -155,7 +155,49 @@
                     <view key="view" contentMode="scaleToFill" id="fUw-EB-xfl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N32-0y-oRr">
+                                <rect key="frame" x="19" y="222" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIZ-e2-27u">
+                                <rect key="frame" x="235" y="409" width="130" height="30"/>
+                                <state key="normal" title="Create my account"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-WK-ARd">
+                                <rect key="frame" x="20" y="107" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7UE-jl-XzJ">
+                                <rect key="frame" x="20" y="266" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qZi-nO-d6Z">
+                                <rect key="frame" x="20" y="150" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dIZ-e2-27u" firstAttribute="top" secondItem="7UE-jl-XzJ" secondAttribute="bottom" constant="75" id="I53-oa-zNR"/>
+                            <constraint firstItem="dIZ-e2-27u" firstAttribute="centerX" secondItem="fUw-EB-xfl" secondAttribute="centerX" id="KGm-Fn-MhD"/>
+                            <constraint firstItem="qZi-nO-d6Z" firstAttribute="leading" secondItem="fUw-EB-xfl" secondAttribute="leadingMargin" id="LPB-1v-0yv"/>
+                            <constraint firstItem="7UE-jl-XzJ" firstAttribute="top" secondItem="N32-0y-oRr" secondAttribute="bottom" constant="25" id="LhQ-va-SLg"/>
+                            <constraint firstItem="N32-0y-oRr" firstAttribute="leading" secondItem="fUw-EB-xfl" secondAttribute="leadingMargin" constant="-1" id="Onu-Cs-PgK"/>
+                            <constraint firstItem="qZi-nO-d6Z" firstAttribute="top" secondItem="vDj-WK-ARd" secondAttribute="bottom" constant="25" id="Q4g-d6-ZNp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vDj-WK-ARd" secondAttribute="leading" id="Q9E-un-G3M"/>
+                            <constraint firstItem="qZi-nO-d6Z" firstAttribute="trailing" secondItem="fUw-EB-xfl" secondAttribute="trailingMargin" id="QJC-HT-Kfu"/>
+                            <constraint firstItem="vDj-WK-ARd" firstAttribute="top" secondItem="dLK-ZR-z8n" secondAttribute="bottom" constant="60" id="S4h-eH-9Xz"/>
+                            <constraint firstItem="7UE-jl-XzJ" firstAttribute="trailing" secondItem="fUw-EB-xfl" secondAttribute="trailingMargin" id="coK-hz-c0k"/>
+                            <constraint firstItem="N32-0y-oRr" firstAttribute="top" secondItem="qZi-nO-d6Z" secondAttribute="bottom" constant="60" id="dhS-Ls-yaJ"/>
+                            <constraint firstItem="7UE-jl-XzJ" firstAttribute="leading" secondItem="fUw-EB-xfl" secondAttribute="leadingMargin" id="gHk-ug-QDi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create your account" id="ptZ-RM-uqM"/>
                 </viewController>
