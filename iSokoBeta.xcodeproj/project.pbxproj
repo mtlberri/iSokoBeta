@@ -10,6 +10,8 @@
 		B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707F2CC1C5D369E00586BF7 /* AppDelegate.swift */; };
 		B707F2D41C5D369E00586BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B707F2D31C5D369E00586BF7 /* Assets.xcassets */; };
 		B707F2E21C5D369E00586BF7 /* iSokoBetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707F2E11C5D369E00586BF7 /* iSokoBetaTests.swift */; };
+		B70A2DD11C5EAF08008A7B59 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A2DD01C5EAF08008A7B59 /* Firebase.framework */; };
+		B70A2DD21C5EAF08008A7B59 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A2DD01C5EAF08008A7B59 /* Firebase.framework */; };
 		B733047E1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */; };
 		B733047F1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */; };
 		B73304801C5D3FAF0040A4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047D1C5D3FAF0040A4EC /* Main.storyboard */; };
@@ -46,6 +48,7 @@
 		B707F2DD1C5D369E00586BF7 /* iSokoBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSokoBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B707F2E11C5D369E00586BF7 /* iSokoBetaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSokoBetaTests.swift; sourceTree = "<group>"; };
 		B707F2E31C5D369E00586BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70A2DD01C5EAF08008A7B59 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		B73304761C5D39B80040A4EC /* iSokoBeta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSokoBeta-Bridging-Header.h"; sourceTree = "<group>"; };
 		B73304771C5D39B80040A4EC /* iSokoBetaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSokoBetaTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5976260062BDBADD449BDF /* libPods.a in Frameworks */,
+				B70A2DD11C5EAF08008A7B59 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70A2DD21C5EAF08008A7B59 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +114,7 @@
 		B707F2CB1C5D369E00586BF7 /* iSokoBeta */ = {
 			isa = PBXGroup;
 			children = (
+				B70A2DD01C5EAF08008A7B59 /* Firebase.framework */,
 				B73304911C5D42330040A4EC /* HomePageViewController.swift */,
 				B73304821C5D3FE50040A4EC /* UserNeed.swift */,
 				B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */,
@@ -419,6 +425,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSokoBeta/**",
+				);
 				INFOPLIST_FILE = iSokoBeta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtlberri.iSokoBeta;
@@ -434,6 +444,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSokoBeta/**",
+				);
 				INFOPLIST_FILE = iSokoBeta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtlberri.iSokoBeta;
@@ -447,6 +461,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSokoBeta/**",
+				);
 				INFOPLIST_FILE = iSokoBetaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtlberri.iSokoBetaTests;
@@ -462,6 +480,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSokoBeta/**",
+				);
 				INFOPLIST_FILE = iSokoBetaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtlberri.iSokoBetaTests;
