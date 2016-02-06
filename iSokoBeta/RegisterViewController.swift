@@ -23,10 +23,14 @@ class RegisterViewController: UIViewController {
         
         // check that email and passwords are not empty
         if emailTextField.text == "" || passwordTextField.text == "" {
+            // Pop-up (Alert view) to be created here
+            displayMessage("Empty Field", message: "Either Email or Password was left empty")
+            
             print("email or pwd is empty")
+            
         } else {
             
-            print("email is \(emailTextField.text) and pwd is \(passwordTextField.text)")
+            print("Email and password have been properly filled. email is \(emailTextField.text) and pwd is \(passwordTextField.text)")
             
             // create user on Firebase
             let ref = Firebase(url:"https://isoko.firebaseio.com")
@@ -36,9 +40,10 @@ class RegisterViewController: UIViewController {
                     
                     if error != nil {
                         // There was an error creating the account
-                        print("There was an error \(error.description) creating the account")
+                        self.displayMessage("There was an error creating your account", message: "\(error.description)")
                         
                     } else {
+                        
                         let uid = result["uid"] as? String
                         print("Successfully created user account with uid: \(uid)")
                         
@@ -46,8 +51,7 @@ class RegisterViewController: UIViewController {
                         
                         let usersRef = ref.childByAppendingPath("users")
                         let newUserRef = usersRef.childByAppendingPath(uid)
-                        newUserRef.setValue(self.emailTextField.text)
-                        
+                        newUserRef.childByAppendingPath("email").setValue(self.emailTextField.text)
                         
                         
                         // logging user in
@@ -57,7 +61,13 @@ class RegisterViewController: UIViewController {
                                 if error != nil {
                                     print("There was an error logging in to this account")
                                 } else {
-                                    print("\(self.emailTextField.text) is now logged in")
+                                    print("Account created! and \(self.emailTextField.text) is now logged in")
+                                    
+                                    // Navigate back to Home Page
+                                    let targetViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomePageViewController") as! HomePageViewController
+                                    self.navigationController?.pushViewController(targetViewController, animated: true)
+                                    
+                                    
                                 }
                         })
                         
@@ -65,6 +75,21 @@ class RegisterViewController: UIViewController {
             })
                         
         }
+        
+    }
+    
+    // Alert message display method
+    
+    func displayMessage(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        // Create an action for the alert
+        let OKaction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(OKaction)
+        
+        // Present the alert
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
     

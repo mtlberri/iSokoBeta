@@ -25,7 +25,7 @@
         <!--Home Page View Controller-->
         <scene sceneID="itL-3f-BVj">
             <objects>
-                <viewController id="daE-lC-Wtm" customClass="HomePageViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="daE-lC-Wtm" customClass="HomePageViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XMx-LP-kKk"/>
                         <viewControllerLayoutGuide type="bottom" id="DQz-EK-Zmv"/>
