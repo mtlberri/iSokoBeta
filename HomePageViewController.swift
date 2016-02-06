@@ -52,11 +52,7 @@ class HomePageViewController: UIViewController {
         // if switch as been set to ON
         if sender.on {
             // trigger segue to login page
-            // performSegueWithIdentifier("loginSegue", sender: self)
-            
-            let targetController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
-            
-            self.navigationController?.pushViewController(targetController, animated: true)
+            goToLogin()
             
         } else {
             // swith has been set to OFF
@@ -79,12 +75,23 @@ class HomePageViewController: UIViewController {
             
         } else {
             print("go to login page!")
+            goToLogin()
         }
         
         
     }
 
-
+    // Go to login page method
+    func goToLogin() {
+        
+        // create a constant pointing to the target view controller
+        let targetController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        
+        // go to the navigation controller of the view and push to target view from there
+        self.navigationController?.pushViewController(targetController, animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

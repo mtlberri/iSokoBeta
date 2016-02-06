@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +29,8 @@ class LoginViewController: UIViewController {
         // check that email and passwords are not empty
         if emailTextField.text == "" || passwordTextField.text == "" {
             print("email or pwd is empty")
+            displayMessage("Empty Field", message: "Either Email or Password was left empty")
+            
         } else {
             
             print("email is \(emailTextField.text) and pwd is \(passwordTextField.text)")
@@ -45,12 +46,34 @@ class LoginViewController: UIViewController {
                         print("There was an error logging in to this account")
                     } else {
                         print("\(self.emailTextField.text) is now logged in")
+                        // Navigate back to Home Page
+                        self.goToHome()
                     }
             })
 
             
         }
         
+    }
+    
+    // Alert message display method
+    func displayMessage(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        // Create an action for the alert
+        let OKaction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(OKaction)
+        
+        // Present the alert
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    func goToHome() {
+        // Navigate back to Home Page
+        let targetViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomePageViewController") as! HomePageViewController
+        self.navigationController?.pushViewController(targetViewController, animated: true)
     }
 
     /*

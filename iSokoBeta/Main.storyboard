@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cM-fB-xNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1157" y="184"/>
+            <point key="canvasLocation" x="-1157" y="128"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="itL-3f-BVj">
@@ -46,7 +46,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="daE-lC-Wtm" eventType="touchUpInside" id="d7V-pR-hgP"/>
-                                    <segue destination="RfW-9Z-Z1a" kind="show" identifier="loginSegue" id="rA7-Zk-Lqt"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-8b-5el">
@@ -74,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDv-Ch-IZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="184"/>
+            <point key="canvasLocation" x="-477" y="128"/>
         </scene>
         <!--Login-->
         <scene sceneID="Kuk-z9-5Xr">
@@ -162,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llg-jv-iuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="960"/>
+            <point key="canvasLocation" x="-517" y="-666"/>
         </scene>
         <!--Create your account-->
         <scene sceneID="MGw-tt-vY4">
@@ -230,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmd-rV-1d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="960"/>
+            <point key="canvasLocation" x="193" y="-666"/>
         </scene>
         <!--Your plan-->
         <scene sceneID="Xg3-Z3-dEB">
@@ -485,6 +484,24 @@
                 <exit id="QxE-UL-ODh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="979" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l0D-Qd-LZu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lzq-hv-vHb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="568-Ws-tbA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RfW-9Z-Z1a" kind="relationship" relationship="rootViewController" id="QFR-Af-FS0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7q-AY-CIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1329" y="-666"/>
         </scene>
     </scenes>
 </document>
