@@ -78,7 +78,7 @@
         <!--Login-->
         <scene sceneID="Kuk-z9-5Xr">
             <objects>
-                <viewController id="RfW-9Z-Z1a" customClass="LoginViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RfW-9Z-Z1a" customClass="LoginViewController" customModule="iSokoBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uyy-V6-kB0"/>
                         <viewControllerLayoutGuide type="bottom" id="hL0-tq-rG3"/>

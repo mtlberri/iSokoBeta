@@ -12,8 +12,6 @@ class HomePageViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginSwitch: UISwitch!
-    // Create a reference to a Firebase location
-    let ref = Firebase(url:"https://isoko.firebaseio.com")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +23,14 @@ class HomePageViewController: UIViewController {
         super.viewDidAppear(animated)
         
         print("Home View Did Appear")
+        let ref = Firebase(url:"https://isoko.firebaseio.com")
         
         // monitor if user logged in
-        self.ref.observeAuthEventWithBlock({ authData in
-            if authData != nil {
+        if ref.authData != nil {
                 // user is logged in!
                 print("user is logged in!")
                 self.loginSwitch.setOn(true, animated: true)
-                self.loginButton.setTitle("(\(authData.providerData["email"]!))", forState: .Normal)
+                self.loginButton.setTitle("(\(ref.authData.providerData["email"]!))", forState: .Normal)
                 
             } else {
                 // user is not logged in :(
@@ -40,7 +38,6 @@ class HomePageViewController: UIViewController {
                 self.loginSwitch.setOn(false, animated: true)
                 self.loginButton.setTitle("Login", forState: .Normal)
             }
-        })
         
     }
 
@@ -59,12 +56,15 @@ class HomePageViewController: UIViewController {
         } else {
             // swith has been set to OFF
             // log out the user
-            self.ref.unauth()
+            let ref = Firebase(url:"https://isoko.firebaseio.com")
+            ref.unauth()
+            self.loginButton.setTitle("Login", forState: .Normal)
             print("user has been logged out")
         }
-        
-        
     }
+
+    
+
 
     /*
     // MARK: - Navigation
