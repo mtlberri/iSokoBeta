@@ -57,10 +57,35 @@ class HomePageViewController: UIViewController {
         } else {
             // swith has been set to OFF
             // log out the user
+            
+            let alert = UIAlertController(title: "Log out?", message: "Are you sure you want to Log Out?", preferredStyle: .Alert)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .Default, handler: {(action: UIAlertAction!) in
+                let ref = Firebase(url:"https://isoko.firebaseio.com")
+                ref.unauth()
+                self.loginButton.setTitle("Login", forState: .Normal)
+                print("user has been logged out")
+            })
+            
+            let noAction = UIAlertAction(title: "No", style: .Default, handler: {(action: UIAlertAction!) in
+                self.loginSwitch.on = true
+                print("no do not log me out")
+            })
+            
+            alert.addAction(yesAction)
+            alert.addAction(noAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            /*
+            
             let ref = Firebase(url:"https://isoko.firebaseio.com")
             ref.unauth()
             self.loginButton.setTitle("Login", forState: .Normal)
             print("user has been logged out")
+            
+            */
+
         }
     }
 
