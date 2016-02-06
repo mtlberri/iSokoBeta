@@ -45,6 +45,7 @@
                                 <rect key="frame" x="284" y="85" width="200" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginButtonPressed:" destination="daE-lC-Wtm" eventType="touchUpInside" id="d7V-pR-hgP"/>
                                     <segue destination="RfW-9Z-Z1a" kind="show" identifier="loginSegue" id="rA7-Zk-Lqt"/>
                                 </connections>
                             </button>

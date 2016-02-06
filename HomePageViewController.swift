@@ -52,7 +52,12 @@ class HomePageViewController: UIViewController {
         // if switch as been set to ON
         if sender.on {
             // trigger segue to login page
-            performSegueWithIdentifier("loginSegue", sender: self)
+            // performSegueWithIdentifier("loginSegue", sender: self)
+            
+            let targetController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            
+            self.navigationController?.pushViewController(targetController, animated: true)
+            
         } else {
             // swith has been set to OFF
             // log out the user
@@ -64,6 +69,20 @@ class HomePageViewController: UIViewController {
     }
 
     
+    @IBAction func loginButtonPressed(sender: UIButton) {
+        
+        let ref = Firebase(url:"https://isoko.firebaseio.com")
+        
+        // if user logged in: do nothing
+        if ref.authData != nil {
+            print("user already logged in. do nothing")
+            
+        } else {
+            print("go to login page!")
+        }
+        
+        
+    }
 
 
     /*
