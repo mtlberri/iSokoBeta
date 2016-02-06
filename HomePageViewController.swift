@@ -10,23 +10,37 @@ import UIKit
 
 class HomePageViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginSwitch: UISwitch!
+    // Create a reference to a Firebase location
+    let ref = Firebase(url:"https://isoko.firebaseio.com")
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Home View Did Load")
         
-        // Create a reference to a Firebase location
-        let myRootRef = Firebase(url:"https://isoko.firebaseio.com")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        // Read data and react to changes
-        /*
-        myRootRef.observeEventType(.Value, withBlock: {
-            snapshot in
-            print("\(snapshot.key) -> \(snapshot.value)")
+        print("Home View Did Appear")
+        
+        // monitor if user logged in
+        self.ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user is logged in!
+                print("user is logged in!")
+                self.loginSwitch.setOn(true, animated: true)
+                self.loginButton.setTitle("(\(authData.providerData["email"]!))", forState: .Normal)
+                
+            } else {
+                // user is not logged in :(
+                print("no user is logged in")
+                self.loginSwitch.setOn(false, animated: true)
+                self.loginButton.setTitle("Login", forState: .Normal)
+            }
         })
-        */
-        
-        // check if user logged in
-        
-        
         
     }
 
@@ -35,6 +49,22 @@ class HomePageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func loginSwithValueChanged(sender: UISwitch) {
+        
+        // if switch as been set to ON
+        if sender.on {
+            // trigger segue to login page
+            performSegueWithIdentifier("loginSegue", sender: self)
+        } else {
+            // swith has been set to OFF
+            // log out the user
+            self.ref.unauth()
+            print("user has been logged out")
+        }
+        
+        
+    }
 
     /*
     // MARK: - Navigation

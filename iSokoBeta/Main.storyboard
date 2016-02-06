@@ -41,23 +41,35 @@
                                     <segue destination="XvR-0W-gYs" kind="show" id="s2N-e8-NZY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68c-VS-Lq9">
-                                <rect key="frame" x="491" y="82" width="68" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68c-VS-Lq9">
+                                <rect key="frame" x="284" y="85" width="200" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="RfW-9Z-Z1a" kind="show" id="rA7-Zk-Lqt"/>
+                                    <segue destination="RfW-9Z-Z1a" kind="show" identifier="loginSegue" id="rA7-Zk-Lqt"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-8b-5el">
+                                <rect key="frame" x="531" y="85" width="51" height="31"/>
+                                <connections>
+                                    <action selector="loginSwithValueChanged:" destination="daE-lC-Wtm" eventType="valueChanged" id="1uW-m7-i4T"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iX3-dB-GhL" firstAttribute="centerX" secondItem="FCt-rj-UQ0" secondAttribute="centerX" id="2au-iH-HQp"/>
                             <constraint firstItem="iX3-dB-GhL" firstAttribute="top" secondItem="XMx-LP-kKk" secondAttribute="bottom" constant="100" id="93Z-TZ-rH9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="68c-VS-Lq9" secondAttribute="trailing" constant="15" id="tc3-y0-0cp"/>
-                            <constraint firstItem="68c-VS-Lq9" firstAttribute="top" secondItem="XMx-LP-kKk" secondAttribute="bottom" constant="15" id="wTc-gw-DkI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xeu-8b-5el" secondAttribute="trailing" id="aeg-MY-4Wv"/>
+                            <constraint firstItem="xeu-8b-5el" firstAttribute="top" secondItem="XMx-LP-kKk" secondAttribute="bottom" constant="15" id="bRQ-ai-RRC"/>
+                            <constraint firstItem="xeu-8b-5el" firstAttribute="leading" secondItem="68c-VS-Lq9" secondAttribute="trailing" constant="15" id="jQp-44-bk1"/>
+                            <constraint firstItem="xeu-8b-5el" firstAttribute="centerY" secondItem="68c-VS-Lq9" secondAttribute="centerY" id="mfJ-74-7x0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dzF-fY-UvH"/>
+                    <connections>
+                        <outlet property="loginButton" destination="68c-VS-Lq9" id="ytO-2T-JxZ"/>
+                        <outlet property="loginSwitch" destination="xeu-8b-5el" id="cnY-9b-2S3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDv-Ch-IZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
