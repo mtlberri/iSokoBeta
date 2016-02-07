@@ -21,7 +21,8 @@ class NeedDefinitionTableViewController: UITableViewController {
     // MARK: functions override
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Need Definition view did load")
+        
         // loading of saved user need (optional binding). Or initiating a blank one if none saved
         if let savedUserNeed = loadUserNeed() {
             self.userNeed = savedUserNeed
@@ -83,8 +84,12 @@ class NeedDefinitionTableViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(sender: UIButton) {
-        // code
+        // save the user need locally on the device
         saveUserNeed()
+        
+        // save the user need on Firebase
+        saveInFirebase()
+        
     }
     
     @IBAction func dataSliderValueChanged(sender: UISlider) {
@@ -139,8 +144,9 @@ class NeedDefinitionTableViewController: UITableViewController {
         }
     }
     
-    // MARK: NSCoding (data persistence)
+    // MARK: methods
     func saveUserNeed() {
+        
         // Method that attempts to archive the userNeed object to a specific location. Returns true if successful
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(userNeed, toFile: UserNeed.ArchiveURL.path!)
         // print console for debugging
@@ -151,11 +157,36 @@ class NeedDefinitionTableViewController: UITableViewController {
         }
     }
     
+    // Saving the data in Firebase
+    func saveInFirebase() {
+        // create path to a new firebase need
+        let ref = Firebase(url:"https://isoko.firebaseio.com")
+        let needsRef = ref.childByAppendingPath("needs")
+        let userNeedRef = needsRef.childByAutoId()
+        
+        // set the user need dictionary
+        let firebaseUserNeed: [String: AnyObject] = ["unlimitedNationwideMinutes": self.userNeed.unlimitedNationwideMinutes, "monthlyCellularDataAmountKey": self.userNeed.monthlyCellularDataAmount]
+        
+        // set the values in Firebase
+        userNeedRef.setValue(firebaseUserNeed)
+        
+        // (on the need) index the user issuing the need
+        userNeedRef.childByAppendingPath(ref.authData.uid).setValue(true)
+        
+        // (on the user) index the need issued by the user
+        let userRef = Firebase(url:"https://isoko.firebaseio.com/users/\(ref.authData.uid)")
+        userRef.updateChildValues(["needsIssued/\(userNeedRef.key)": true])
+        
+        //
+        
+        print("The need \(userNeedRef.key) has been created in Firebase!")
+    }
+    
     func loadUserNeed() -> UserNeed? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(UserNeed.ArchiveURL.path!) as? UserNeed
     }
     
-    // MARK: Function returning string corresponding to data amount chosen by user
+    // Function returning string corresponding to data amount chosen by user
     func stringForExactValue(exactValue: Float) -> String {
         // if exact value is in between 0.5 and 1GB, display the intermediary 0.5GB
         if (exactValue > Float(0.1)) && (exactValue <= Float(1)) {
