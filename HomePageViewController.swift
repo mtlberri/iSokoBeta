@@ -15,7 +15,6 @@ class HomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Home View Did Load")
         
     }
     
@@ -77,14 +76,6 @@ class HomePageViewController: UIViewController {
             
             self.presentViewController(alert, animated: true, completion: nil)
             
-            /*
-            
-            let ref = Firebase(url:"https://isoko.firebaseio.com")
-            ref.unauth()
-            self.loginButton.setTitle("Login", forState: .Normal)
-            print("user has been logged out")
-            
-            */
 
         }
     }

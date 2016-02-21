@@ -14,8 +14,6 @@
 		B733047F1C5D3FAF0040A4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */; };
 		B73304801C5D3FAF0040A4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047D1C5D3FAF0040A4EC /* Main.storyboard */; };
 		B73304811C5D3FAF0040A4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B733047D1C5D3FAF0040A4EC /* Main.storyboard */; };
-		B73304851C5D3FE50040A4EC /* UserNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304821C5D3FE50040A4EC /* UserNeed.swift */; };
-		B73304861C5D3FE50040A4EC /* UserNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304821C5D3FE50040A4EC /* UserNeed.swift */; };
 		B73304871C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */; };
 		B73304881C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */; };
 		B73304891C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */; };
@@ -52,7 +50,6 @@
 		B73304771C5D39B80040A4EC /* iSokoBetaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSokoBetaTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B733047D1C5D3FAF0040A4EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B73304821C5D3FE50040A4EC /* UserNeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNeed.swift; sourceTree = "<group>"; };
 		B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 		B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedDefinitionTableViewController.swift; sourceTree = "<group>"; };
 		B73304911C5D42330040A4EC /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = ../HomePageViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				B73304911C5D42330040A4EC /* HomePageViewController.swift */,
-				B73304821C5D3FE50040A4EC /* UserNeed.swift */,
 				B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */,
 				B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */,
 				B733047C1C5D3FAF0040A4EC /* LaunchScreen.storyboard */,
@@ -305,7 +301,6 @@
 				B73304871C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,
 				B798D1CA1C5EB739001706AF /* RegisterViewController.swift in Sources */,
 				B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */,
-				B73304851C5D3FE50040A4EC /* UserNeed.swift in Sources */,
 				B73304921C5D42330040A4EC /* HomePageViewController.swift in Sources */,
 				B73304891C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
 			);
@@ -316,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B798D1CE1C5EBADD001706AF /* LoginViewController.swift in Sources */,
-				B73304861C5D3FE50040A4EC /* UserNeed.swift in Sources */,
 				B798D1CB1C5EB739001706AF /* RegisterViewController.swift in Sources */,
 				B73304881C5D3FE50040A4EC /* DeviceTableViewController.swift in Sources */,
 				B733048A1C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
