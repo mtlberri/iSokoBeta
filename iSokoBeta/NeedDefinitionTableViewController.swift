@@ -83,15 +83,6 @@ class NeedDefinitionTableViewController: UITableViewController {
         print("You want unlimited nationwide minutes: \(userNeed.unlimitedNationwideMinutes)")
     }
     
-    @IBAction func saveButtonPressed(sender: UIButton) {
-        // save the user need locally on the device
-        saveUserNeed()
-        
-        // save the user need on Firebase
-        saveInFirebase()
-        
-    }
-    
     @IBAction func dataSliderValueChanged(sender: UISlider) {
         let exactValue = (sender.value) * Float(UserNeed.maxProposedMobileData)
         
@@ -126,7 +117,7 @@ class NeedDefinitionTableViewController: UITableViewController {
         }
     }
     
-    // MARK: unwind methods
+    
     @IBAction func unwindToNeedDefinition(sender: UIStoryboardSegue) {
         // if the sender source is the DeviceTableViewController
         // we retrieve the source view controller from which we unwind
@@ -144,6 +135,23 @@ class NeedDefinitionTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func saveButtonPressed(sender: UIButton) {
+        // save the user need locally on the device
+        saveUserNeed()
+        
+        // check if the user is logged in
+        let ref = Firebase(url:"https://isoko.firebaseio.com")
+        if ref.authData != nil {
+            //user is authenticated and data can be saved to Firebase
+            print("user \(ref.authData) is authenticated and data can be saved to Firebase")
+            // save the user need on Firebase
+            saveInFirebase()
+        } else {
+            print("user is not logged in and data cannot be saved in Firebase")
+        }
+        
+    }
+    
     // MARK: methods
     func saveUserNeed() {
         
@@ -153,7 +161,7 @@ class NeedDefinitionTableViewController: UITableViewController {
         if !isSuccessfulSave {
             print("Failed to save the userNeed...")
         } else {
-            print("userNeed has been saved successfully")
+            print("userNeed has been saved locally (old method) successfully")
         }
     }
     
