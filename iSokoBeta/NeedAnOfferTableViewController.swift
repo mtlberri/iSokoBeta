@@ -5,10 +5,10 @@ class NeedAnOfferTableViewController: UITableViewController {
     // MARK: Properties
     var ref: Firebase!
     var handle: UInt!
-    var testOffer = ["provider": "None", "monthlyRate": 0.0] {
+    var offer: [Offer] = [Offer(provider: "None", monthlyRate: 0.0)] {
         //property observer that will refresh table
         didSet{
-            print("test offer did change")
+            print("offer array did change")
             self.tableView.reloadData()
         }
     }
@@ -30,16 +30,8 @@ class NeedAnOfferTableViewController: UITableViewController {
         
         print("Need and Offer table view will appear")
         
-        let testOfferRef = self.ref.childByAppendingPath("offers/0")
-        
-        handle = testOfferRef.observeEventType(.Value, withBlock: { snapshot in
-            
-            print("test offer snaphot value is: \(snapshot.value)")
-            
-            self.testOffer["provider"] = snapshot.value["provider"] as! String
-            self.testOffer["monthlyRate"] = snapshot.value["monthlyRate"] as! Float
-            
-        })
+        // load offers 0 and 1 from Firebase
+        self.loadOffersFromFirebase(["0","1"])
         
     }
 
@@ -56,22 +48,43 @@ class NeedAnOfferTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.offer.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("OfferTableViewCell", forIndexPath: indexPath) as! OfferTableViewCell
 
         // Configure the cell...
-        cell.rate.text = String("\(self.testOffer["monthlyRate"]!)$")
+        cell.rate.text = String("\(self.offer[indexPath.item].monthlyRate)$")
 
         return cell
     }
 
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        self.ref.removeObserverWithHandle(self.handle)
-        print("offer event listener handle removed")
+        // self.ref.removeObserverWithHandle(self.handle)
+        // print("offer event listener handle removed")
+    }
+    
+    // MARK: functions
+    
+    func loadOffersFromFirebase(offersIDArray: [String]) {
+        
+        let firebaseOffers = self.ref.childByAppendingPath("offers")
+        
+        for offerID in offersIDArray {
+            
+            firebaseOffers.childByAppendingPath("\(offerID)").observeEventType(.Value, withBlock: { snapshot in
+                
+                print("test offer \(offerID) snaphot value is: \(snapshot.value)")
+                
+                // append additional Offer to the Array of Offers
+                self.offer.append(Offer(provider: snapshot.value["provider"] as! String, monthlyRate: snapshot.value["monthlyRate"] as! Float))
+                
+            })
+            
+            
+        }
     }
     
     /*

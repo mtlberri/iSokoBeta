@@ -28,6 +28,8 @@
 		B7BFE4621C824DF200F4BB31 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE4601C824DF200F4BB31 /* OfferTableViewCell.swift */; };
 		B7BFE4641C8255D700F4BB31 /* NeedAnOfferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE4631C8255D700F4BB31 /* NeedAnOfferTableViewController.swift */; };
 		B7BFE4651C8255D700F4BB31 /* NeedAnOfferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE4631C8255D700F4BB31 /* NeedAnOfferTableViewController.swift */; };
+		B7BFE4671C82686300F4BB31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE4661C82686300F4BB31 /* Offer.swift */; };
+		B7BFE4681C82686300F4BB31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE4661C82686300F4BB31 /* Offer.swift */; };
 		EB5976260062BDBADD449BDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E047CBA1EF05C1026A793A20 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		B798D1CC1C5EBADD001706AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7BFE4601C824DF200F4BB31 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		B7BFE4631C8255D700F4BB31 /* NeedAnOfferTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedAnOfferTableViewController.swift; sourceTree = "<group>"; };
+		B7BFE4661C82686300F4BB31 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		BA5C0F8B6AB8ACFF904E38E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E047CBA1EF05C1026A793A20 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B73304911C5D42330040A4EC /* HomePageViewController.swift */,
+				B7BFE4661C82686300F4BB31 /* Offer.swift */,
 				B73304831C5D3FE50040A4EC /* DeviceTableViewController.swift */,
 				B7BFE4631C8255D700F4BB31 /* NeedAnOfferTableViewController.swift */,
 				B73304841C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift */,
@@ -311,6 +315,7 @@
 				B7BFE4641C8255D700F4BB31 /* NeedAnOfferTableViewController.swift in Sources */,
 				B707F2CD1C5D369E00586BF7 /* AppDelegate.swift in Sources */,
 				B73304921C5D42330040A4EC /* HomePageViewController.swift in Sources */,
+				B7BFE4671C82686300F4BB31 /* Offer.swift in Sources */,
 				B73304891C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
 				B7BFE4611C824DF200F4BB31 /* OfferTableViewCell.swift in Sources */,
 			);
@@ -326,6 +331,7 @@
 				B7BFE4651C8255D700F4BB31 /* NeedAnOfferTableViewController.swift in Sources */,
 				B733048A1C5D3FE50040A4EC /* NeedDefinitionTableViewController.swift in Sources */,
 				B73304931C5D42330040A4EC /* HomePageViewController.swift in Sources */,
+				B7BFE4681C82686300F4BB31 /* Offer.swift in Sources */,
 				B707F2E21C5D369E00586BF7 /* iSokoBetaTests.swift in Sources */,
 				B7BFE4621C824DF200F4BB31 /* OfferTableViewCell.swift in Sources */,
 			);
